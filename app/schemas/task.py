@@ -19,3 +19,11 @@ class TaskResponse(TaskBase):
     created_at: datetime
     updated_at: datetime
     model_config = ConfigDict(from_attributes=True)
+
+class TaskUpdate(TaskBase):
+    title: str | None = None
+    description: str | None = None
+    priority: str | None = None
+    due_date: datetime | None = None
+
+
